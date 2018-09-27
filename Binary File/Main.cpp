@@ -15,9 +15,8 @@ int main()
 	while (true)
 	{
 		mainMenu();
-		int input;
-		cin >> input;
-		checkValid(input);
+		int input = checkValid(0);
+
 		if (input == 1)
 		{
 			addMonster();
@@ -182,7 +181,11 @@ int checkValid(int input)
 				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 			}
 		}
-		if (input == 1 || input == 2)
+		if (input == 1 || 
+			input == 2 ||
+			input == 3 ||
+			input == 4 ||
+			input == 5)
 		{
 			validNum = true;
 			return input;
